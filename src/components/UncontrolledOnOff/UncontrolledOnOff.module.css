@@ -1,0 +1,35 @@
+.onOff {
+  display: flex;
+  margin: 20px;
+}
+
+.on, .off {
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.on.active {
+  background-color: green;
+}
+
+.off.active {
+  background-color: red;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.circleOn {
+  background-color: green;
+}
+
+.circleOff {
+  background-color: red;
+}
