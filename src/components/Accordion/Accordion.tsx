@@ -6,7 +6,7 @@ type AccordionPropsType = {
   onChange: () => void
 }
 
-function Accordion(props: AccordionPropsType) {
+export function Accordion(props: AccordionPropsType) {
   console.log('Accordion rendering');
   return <>
     <AccordionTitle title={props.title} onChange={props.onChange}/>
