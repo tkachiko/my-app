@@ -4,7 +4,7 @@ type AccordionPropsType = {
   titleValue: string,
 }
 
-function UncontrolledAccordion(props: AccordionPropsType) {
+export function UncontrolledAccordion(props: AccordionPropsType) {
   console.log('Accordion rendering');
   const [collapsed, setCollapsed] = useState(true);
   return <>
