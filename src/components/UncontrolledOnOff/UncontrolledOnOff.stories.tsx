@@ -9,10 +9,10 @@ export default {
   component: UncontrolledOnOff,
 } as ComponentMeta<typeof UncontrolledOnOff>;
 
-const callback = action('clicked')
+const callback = action('clicked');
 
 export const OnMode = () => <UncontrolledOnOff defaultOn={true} onChange={callback}/>;
 export const OffMode = () => <UncontrolledOnOff defaultOn={false} onChange={callback}/>;
-export const DefaultInputValue = () => <input value={'yo'} readOnly={true}/>;
+export const BugMode = () => <div>Unsync when change defaultValue when already rendered</div>;
 
 

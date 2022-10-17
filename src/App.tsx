@@ -31,7 +31,7 @@ function App() {
       <Accordion title={'Menu'} collapsed={collapsed} onChange={() => setCollapsed(!collapsed)}/>
       <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
       {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
-      <UncontrolledRating/>
+      {/*<UncontrolledRating/>*/}
     </div>
   );
 }
