@@ -28,7 +28,7 @@ function App() {
       <Rating value={5}/>*/}
 
       {/*<OnOff on={switchOn} onChange={() => setSwitchOn(!switchOn)}/>*/}
-      <Accordion title={'Menu'} collapsed={collapsed} onChange={() => setCollapsed(!collapsed)}/>
+      <Accordion title={'Menu'} collapsed={collapsed} onChange={() => setCollapsed(!collapsed)} onClick={() => {}} items={[]}/>
       <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
       {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
       {/*<UncontrolledRating/>*/}
