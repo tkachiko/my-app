@@ -5,7 +5,7 @@ type OnOffType = {
   onChange: (on: boolean) => void
 }
 
-export function OnOff(props: OnOffType) {
+export const OnOff = React.memo((props: OnOffType) => {
 
   const onStyle = {
     width: '30px',
@@ -15,7 +15,7 @@ export function OnOff(props: OnOffType) {
     padding: '2px',
     backgroundColor: props.on ? 'green' : 'white',
     cursor: 'pointer'
-  }
+  };
   const offStyle = {
     width: '30px',
     height: '20px',
@@ -25,7 +25,7 @@ export function OnOff(props: OnOffType) {
     padding: '2px',
     backgroundColor: props.on ? 'white' : 'red',
     cursor: 'pointer'
-  }
+  };
   const indicatorStyle = {
     width: '10px',
     height: '10px',
@@ -34,7 +34,7 @@ export function OnOff(props: OnOffType) {
     display: 'inline-block',
     marginLeft: '5px',
     backgroundColor: props.on ? 'green' : 'red'
-  }
+  };
 
   return (
     <div>
@@ -43,4 +43,4 @@ export function OnOff(props: OnOffType) {
       <div style={indicatorStyle}></div>
     </div>
   );
-};
+});

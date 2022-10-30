@@ -1,13 +1,13 @@
 import React from 'react';
 
-export type RatingValueType =  0 | 1 | 2 | 3 | 4 | 5
+export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
 
 type RatingPropsType = {
   value: RatingValueType
   onClick: (value: RatingValueType) => void
 }
 
-export function Rating(props: RatingPropsType) {
+export const Rating = React.memo((props: RatingPropsType) => {
   console.log('Rating rendered');
   return (
     <div>
@@ -18,7 +18,7 @@ export function Rating(props: RatingPropsType) {
       <Star selected={props.value > 4} onClick={props.onClick} value={5}/>
     </div>
   );
-}
+});
 
 type StarPropsType = {
   selected: boolean,
@@ -26,9 +26,9 @@ type StarPropsType = {
   value: RatingValueType
 }
 
-function Star(props: StarPropsType) {
+const Star = React.memo((props: StarPropsType) => {
   console.log('Star rendered');
   return <span onClick={() => props.onClick(props.value)}>
   {props.selected ? <b>star </b> : 'star '}
 </span>;
-}
+});
