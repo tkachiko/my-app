@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 export default {
-  title: 'React.memo demo'
+  title: 'React.memo demo',
 };
 
 const NewMessagesCounter = React.memo((props: { count: number }) => {
@@ -14,7 +14,7 @@ const UsersSecret = (props: { users: Array<string> }) => {
 
 const Users = React.memo(UsersSecret);
 
-export const Example1 = React.memo(() => {
+export const Example1 = () => {
   const [counter, setCounter] = useState(0);
   const [users, setUsers] = useState(['Dimych', 'Valera', 'Artem']);
 
@@ -30,4 +30,4 @@ export const Example1 = React.memo(() => {
     <NewMessagesCounter count={counter}/>
     <Users users={users}/>
   </>;
-});
+};
