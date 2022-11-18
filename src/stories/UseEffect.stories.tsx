@@ -22,17 +22,17 @@ export const SimpleExample = () => {
 
   useEffect(() => {
     console.log('useEffect every render');
-    document.title = counter.toString()
+    document.title = counter.toString();
   });
 
   useEffect(() => {
     console.log('useEffect only first render (componentDidMount)');
-    document.title = counter.toString()
+    document.title = counter.toString();
   }, []);
 
   useEffect(() => {
     console.log('useEffect first render and every counter change');
-    document.title = counter.toString()
+    document.title = counter.toString();
   }, [counter]);
 
   return <>
@@ -42,3 +42,27 @@ export const SimpleExample = () => {
   </>;
 };
 
+export const SetTimeoutExample = () => {
+  const [fake, setFake] = useState<number>(1);
+  const [counter, setCounter] = useState<number>(1);
+
+  console.log('SetTimeoutExample');
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     console.log('setTimeout');
+  //     document.title = counter.toString()
+  //   }, 1000)
+  // }, [])
+
+  useEffect(() => {
+    setInterval(() => {
+      console.log('tick: ' + counter);
+      setCounter(state => state + 1);
+    }, 1000);
+  }, []);
+
+  return <>
+    Hello, counter: {counter} - fake: {fake}
+  </>;
+};
